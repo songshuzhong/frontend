@@ -19,7 +19,7 @@ module.exports = {
       views: path.resolve( cwd, 'client/scripts' )
     },
     output: {
-      views: path.resolve( cwd, 'dist', 'js' )
+      views: path.resolve( cwd, '../resources/static' )
     }
   }
 };

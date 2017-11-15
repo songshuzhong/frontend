@@ -11,7 +11,6 @@
     "prop-types": "^15.5.10",
     "react-router": "^4.0.0",
     "react-router-dom": "^4.2.2",
-    "webpack": "^3.2.0",
     "gulp": "^3.9.1"
   },
   "devDependencies": {
@@ -30,10 +29,15 @@
     "extract-text-webpack-plugin": "^3.0",
     "file-loader": "^0.11.2",
     "fs": "0.0.1-security",
+    "gulp-babel": "^7.0.0",
+    "gulp-header": "^1.8.9",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^3.0.0",
     "less": "^2.7.2",
     "less-loader": "^4.0.5",
     "path": "^0.12.7",
-    "stream": "0.0.2",
-    "style-loader": "^0.18.2"
+    "style-loader": "^0.18.2",
+    "webpack-bundle-analyzer": "^2.9.1",
+    "webpack-stream": "^4.0.0"
   }
 }
