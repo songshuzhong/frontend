@@ -16,7 +16,8 @@ module.exports = {
 
   paths: {
     source: {
-      views: path.resolve( cwd, 'client/scripts' )
+      js: path.resolve( cwd, 'client/scripts' ),
+      cs: path.resolve( cwd, 'client/styles' )
     },
     output: {
       views: path.resolve( cwd, '../resources/static' )
