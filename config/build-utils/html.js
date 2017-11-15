@@ -6,7 +6,7 @@
  */
 import React from 'react';
 
-const initScriptTemplate = () => `ReactRender.csr();`;
+const initScriptTemplate = () => `EPMUIApp.csr();`;
 
 const Html = ( children ) => {
 
@@ -16,12 +16,12 @@ const Html = ( children ) => {
       <meta charSet="utf-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
       <meta httpEquiv="X-UA-Compatible" content="IE=edge, chrome=1" />
-      <link href="main.css" rel="stylesheet" />
+      <link href="cs/main.css" rel="stylesheet" />
       <title>{ 'EPM UI App' }</title>
     </head>
     <body>
     <div id="react-root" dangerouslySetInnerHTML={ { __html: children.children } }/>
-    <script src="bundle.js" />
+    <script src="js/bundle.js" />
     <script dangerouslySetInnerHTML={ { __html: initScriptTemplate() } } />
     </body>
     </html>

@@ -29,7 +29,7 @@ const dev = {
   devtool: 'cheap-module-source-map',
   plugins: [
     new webpack.optimize.OccurrenceOrderPlugin(),
-    new ExtractTextPlugin({ filename: "css/main.css", disable: false, allChunks: true }),
+    new ExtractTextPlugin({ filename: "cs/main.css", disable: false, allChunks: true }),
   ]
 };
 
@@ -54,7 +54,7 @@ const pro = {
   devtool: 'cheap-module-source-map',
   plugins: [
     new webpack.optimize.OccurrenceOrderPlugin(),
-    new ExtractTextPlugin({ filename: "css/main.css", disable: false, allChunks: true }),
+    new ExtractTextPlugin({ filename: "cs/main.css", disable: false, allChunks: true }),
     new webpack.optimize.UglifyJsPlugin( { output: { comments: false }, compress: { warnings: false } } )
   ]
 };
