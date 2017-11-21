@@ -6,16 +6,17 @@
   "author": "",
   "license": "ISC",
   "scripts": {
-    "start:dev": "gulp build:dev",
-    "start:pro": "gulp build:prod"
+    "watch": "webpack --watch --color --config ./config/webpack.config.js",
+    "build": "webpack --color --config ./config/webpack.config.js",
+    "build:dev": "webpack --color --config ./config/webpack.config.js",
+    "build:prod": "set NODE_ENV=production&&webpack --color --config ./config/webpack.config.js"
   },
   "dependencies": {
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
     "prop-types": "^15.5.10",
     "react-router": "^4.0.0",
-    "react-router-dom": "^4.2.2",
-    "gulp": "^3.9.1"
+    "react-router-dom": "^4.2.2"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
@@ -30,18 +31,18 @@
     "babel-preset-react": "^6.24.1",
     "babel-register": "^6.26.0",
     "css-loader": "^0.28.7",
+    "epm-ui": "^0.4.19",
+    "epm-ui-css": "^0.1.15-alpha.1",
     "extract-text-webpack-plugin": "^3.0",
     "file-loader": "^0.11.2",
     "fs": "0.0.1-security",
-    "gulp-babel": "^7.0.0",
-    "gulp-header": "^1.8.9",
-    "gulp-rename": "^1.2.2",
-    "gulp-uglify": "^3.0.0",
     "less": "^2.7.2",
     "less-loader": "^4.0.5",
     "path": "^0.12.7",
     "style-loader": "^0.18.2",
+    "webpack": "^3.8.1",
     "webpack-bundle-analyzer": "^2.9.1",
-    "webpack-stream": "^4.0.0"
+    "webpack-manifest-plugin": "^1.3.2",
+    "webpack-sources": "^1.0.2"
   }
 }

@@ -1,0 +1,157 @@
+@text-color: #666666;
+@href-color: #0099FF;
+@text-family: '微软雅黑 Regular', '微软雅黑';
+@border-color: #DCDCDC;
+
+.product.docker {
+  position: relative;
+  &.main-body{
+    font-family: @text-family;
+    font-size: 14px;
+    color: @text-color;
+  }
+
+  &.main-title {
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  &.desc-text,&.explain-text {
+    float: left;
+    margin: 20px 6% 40px 6%;
+  }
+
+  &.array-table {
+    margin: 20px 0 ;
+    width: 100%;
+    height: auto;
+    border: 1px @border-color solid;
+    padding: 10px 15px;
+  }
+
+  &.middle-line {
+    margin-top:25px;
+  }
+
+ /* &.left-menu-item {
+    height: 100/3%;
+  }*/
+
+  &.left-menu-item-title {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+    .font.active{
+      color: @href-color;
+    }
+    span {
+      margin-left: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    img {
+      position: relative;
+      float: right;
+      margin-top: 5px;
+      width: 15px;
+      height: 15px;
+    }
+  }
+
+  &.right-content {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+    ul{
+      float:none;
+      padding: 20px 20px 20px 20px;
+      li{
+        list-style-type: disc;
+        padding:10px 0;
+      }
+    }
+  }
+
+  &.scenes-tabs{
+    margin: 40px 0 ;
+    border: 1px @border-color solid;
+  }
+
+  &.top-tabs {
+    height: 40px;
+
+    .tab-item {
+      float: left;
+      height: 100%;
+      padding-top: 1%;
+      text-align: center;
+      font-size: 16px;
+      border-bottom: 1px @border-color solid;
+      cursor: pointer;
+    }
+
+    .tab-item.index31,.tab-item.index41 {
+      border: 1px @border-color solid;
+      border-top:none;
+    }
+
+    .tab-item.index20 {
+      border: 1px @border-color solid;
+      border-left: none;
+      border-top: none;
+    }
+
+    .tab-item.index42 {
+      border: 1px @border-color solid;
+      border-left: none;
+      border-top: none;
+    }
+
+    .tab-item.switch {
+      border-bottom: none;
+      color: @href-color;
+    }
+
+  }
+
+  &.bottom-content {
+    padding:10px 60px 20px 60px;
+  }
+
+  &.docs-content {
+    margin: 20px 0 40px 0;
+  }
+
+  &.docs-content-item {
+    float: left;
+
+    p {
+      font-size: 15px;
+      font-weight: bold;
+      margin-bottom: 22px;
+    }
+
+    .content-span p {
+      font-weight: 400;
+    }
+
+    a {
+      text-decoration:none;
+      color: @text-color;
+    }
+
+    a:hover {
+      color: @href-color;
+    }
+  }
+}
+
+
+
+
+

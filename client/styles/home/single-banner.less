@@ -1,0 +1,139 @@
+@dark-bg: #333;
+
+.resolve-parent-height {
+  display: block;
+  content: '.';
+  clear: both;
+  line-height: 0;
+  visibility: hidden;
+}
+
+.banners.main-wrapper {
+  width: 100%;
+  
+  .banner-wrapper {
+    width: 100%;
+    height: 300px;
+    padding-left: 7%;
+    padding-right: 14%;
+    
+    &:after{
+      .resolve-parent-height;
+    }
+    
+    .content-wrapper {
+      padding-top: 40px;
+      width: 51%;
+    }
+
+    .title {
+      font-family: '微软雅黑 Bold', '微软雅黑';
+      font-weight: 700;
+      font-size: 18px;
+      font-style: normal;
+      color: #666666;
+    }
+
+    .text{
+      width: 100%;
+      height: 48px;
+      font-size: 18px;
+      text-align: left;
+      white-space: pre-wrap;
+    }
+    
+    .button {
+      min-width: 100px;
+      height: 35px;
+      border: none;
+      outline: none;
+      border-radius: 5px;
+      background-color: #5389D2;
+      font-size: 14px;
+      color: #fff;
+      font-weight: 700;
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .btn_left{
+      margin-right: 15px;
+      color : #0069A8;
+      background-color: rgba(255, 255, 255, 0);
+      border: 1px solid #0069A8;
+      transition:  0.3s;
+      -moz-transition:  0.3s; /* Firefox 4 */
+      -webkit-transition:  0.3s; /* Safari 和 Chrome */
+      -o-transition:  0.3s; /* Opera */
+
+      &:hover{
+        color : #fff;
+        background-color: #0069A8;
+      }
+    }
+    .btn_right{
+      margin-right: 15px;
+      color : #fff;
+      background-color: rgba(255, 255, 255, 0);
+      border: 1px solid #fff;
+      transition:  0.3s;
+      -moz-transition:  0.3s; /* Firefox 4 */
+      -webkit-transition:  0.3s; /* Safari 和 Chrome */
+      -o-transition:  0.3s; /* Opera */
+
+      &:hover{
+        color : #0069A8;
+        background-color: #fff;
+      }
+    }
+
+    .pic {
+      width: 331px;
+      height: 230px;
+      margin-right: 20px;
+    }
+    
+    &.default {
+      background-color: #fff;
+      
+      .content-wrapper.left {
+        float: left;
+        
+        .text {
+          color: #666;
+        }
+      }
+
+      .content-wrapper.right {
+        float: right;
+
+        .text {
+          color: #666;
+        }
+      }
+      
+      .pic.right {
+        float: left;
+      }
+      .pic.left {
+        float: right;
+      }
+    }
+  
+    &.dark {
+      background-color: @dark-bg;
+  
+      .content-wrapper {
+        float: right;
+    
+        .text {
+          color: #fff;
+        }
+      }
+  
+      .pic {
+        float: left;
+      }
+    }
+  }
+}

@@ -16,12 +16,12 @@ const Html = ( children ) => {
       <meta charSet="utf-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
       <meta httpEquiv="X-UA-Compatible" content="IE=edge, chrome=1" />
-      <link href="cs/main.css" rel="stylesheet" />
-      <title>{ 'EPM UI App' }</title>
+      <link href="STYLESHEET_SOURCE_PLACEHOLDER" rel="stylesheet" />
+      <title>{ 'TITLE_SOURCE_PLACEHOLDER' }</title>
     </head>
     <body>
-    <div id="react-root" dangerouslySetInnerHTML={ { __html: children.children } }/>
-    <script src="js/bundle.js" />
+    <div id="react-root" dangerouslySetInnerHTML={ { __html: children.children } } />
+    <script src="JAVASCRIPT_SOURCE_PLACEHOLDER" />
     <script dangerouslySetInnerHTML={ { __html: initScriptTemplate() } } />
     </body>
     </html>

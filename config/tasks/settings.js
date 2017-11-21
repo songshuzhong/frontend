@@ -20,7 +20,7 @@ module.exports = {
       cs: path.resolve( cwd, 'client/styles' )
     },
     output: {
-      views: path.resolve( cwd, '../resources/static' )
+      views: path.resolve( cwd, '../resources' )
     }
   }
 };
