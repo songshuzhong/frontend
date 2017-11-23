@@ -1,6 +1,6 @@
 const context = {
-  contextPath: '',
-  namespace :'cop-pangu'
+  contextPath: '/cop-eportal',
+  namespace: 'cop-pangu'
 };
 
 module.exports = context;

@@ -8,13 +8,18 @@ import React from 'react';
 import { render } from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
 
-import App from '../../client/scripts/config/routes';
+import App from '../../client/scripts/app';
 
-const clientSideRender = () => (
-    render(
-        <BrowserRouter><App /></BrowserRouter>,
-        document.getElementById('react-root')
-    )
+const clientSideRender = ( state, routerCtx ) => (
+  render(
+    <BrowserRouter { ...routerCtx }>
+      <App initialState={ state } />
+    </BrowserRouter>,
+    document.getElementById( 'react-root' ),
+    () => {
+      document.body.removeChild( document.body.lastElementChild );
+    }
+  )
 );
 
 export default clientSideRender;

@@ -12,17 +12,19 @@
     "build:prod": "set NODE_ENV=production&&webpack --color --config ./config/webpack.config.js"
   },
   "dependencies": {
+    "prop-types": "^15.5.10",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
-    "prop-types": "^15.5.10",
-    "react-router": "^4.0.0",
+    "react-router": "^4.2.0",
     "react-router-dom": "^4.2.2"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
+    "babel-eslint": "^8.0.2",
     "babel-loader": "^7.1.2",
     "babel-plugin-transform-es2015-modules-commonjs": "^6.26.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-plugin-transform-react-jsx": "^6.24.1",
     "babel-polyfill": "^6.26.0",
     "babel-preset-env": "^1.6.0",
@@ -33,6 +35,10 @@
     "css-loader": "^0.28.7",
     "epm-ui": "^0.4.19",
     "epm-ui-css": "^0.1.15-alpha.1",
+    "eslint": "^3.19.0",
+    "eslint-loader": "^1.9.0",
+    "eslint-plugin-flowtype": "^2.39.1",
+    "eslint-plugin-react": "^7.5.1",
     "extract-text-webpack-plugin": "^3.0",
     "file-loader": "^0.11.2",
     "fs": "0.0.1-security",

@@ -1,21 +1,27 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 
-import { Line } from 'epm-ui';
+import { Line, Alert } from 'epm-ui';
 
 import ctx from '../config/context-config';
 
+/**
+ * About
+ */
 class About extends Component {
-  constructor( props ) {
-    super( props );
-  }
 
+  /**
+   * render
+   */
   render() {
-    return(
-        <div>
-          <Line dataSource={ `${ ctx.contextPath }/rest/line` }/>
-        </div>
-    )
+
+    return (
+      <div>
+        <Alert message="这是个 Alert" />
+        <Line dataSource={ `${ ctx.contextPath }/rest/line` } />
+      </div>
+    );
   }
 }
 
 export { About };
+export default About;

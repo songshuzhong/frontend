@@ -12,13 +12,15 @@ class ReactPlugin {
     compiler.plugin( "emit", ( compilation, callback ) => {
       compilation.chunks.forEach( ( chunk ) => {
         chunk.files.forEach( ( filename ) => {
-          if ( filename.includes( `js/bundle.` ) ) {
+          if ( filename.includes( `js/${ this.options.js }.` ) ) {
+            const { js, cs, title, contextPath } = this.options;
             const hash = compilation.fullHash.substring( 0, 5 );
             const source = compilation.assets[ filename ].source().toString();
             const newSource = source
-                .replace( /JAVASCRIPT_SOURCE_PLACEHOLDER/g, `js/bundle.${ hash }.js` )
-                .replace(/STYLESHEET_SOURCE_PLACEHOLDER/g, `cs/main.${ hash }.css`)
-                .replace(/TITLE_SOURCE_PLACEHOLDER/g, 'cop-eportal' );
+                .replace( /STYLESHEET_SOURCE_PLACEHOLDER/g, `${ contextPath }/static/cs/${ cs }.${ hash }.css` )
+                .replace( /JAVASCRIPT_SOURCE_PLACEHOLDER/g, `${ contextPath }/static/js/${ js }.${ hash }.js` )
+                .replace( /CONTEXTPATH_SOURCE_PLACEHOLDER/g, `${ contextPath }` )
+                .replace( /TITLE_SOURCE_PLACEHOLDER/g, `${ title }` );
             compilation.assets[ filename ] = new RawSource( newSource );
           }
         });

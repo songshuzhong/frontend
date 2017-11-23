@@ -2,19 +2,27 @@ import React, { Component } from 'react';
 import logo from '../../media/logo.svg';
 import '../../styles/app.css';
 
+/**
+ * App
+ */
 class App extends Component {
 
-    constructor( props ) {
-        super( props );
+  /**
+   * constructor
+   */
+  constructor( props ) {
+    super( props );
+    this.state = { dataSource: {} };
+  }
 
-        this.state = { dataSource: {}};
-    }
-
+  /**
+   * render
+   */
   render() {
     return (
       <div className="App">
         <div className="App-header">
-          <img src={ logo } className="App-logo" alt="logo" />
+          <img src={ `${ logo }` } className="App-logo" alt="logo" />
           <h2>Welcome to React</h2>
         </div>
         <p className="App-intro">

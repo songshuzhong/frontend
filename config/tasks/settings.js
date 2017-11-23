@@ -1,6 +1,7 @@
 const path = require( 'path' );
 const cwd = process.cwd();
 const pkg = require( path.resolve( cwd, 'package.json' ) );
+const config = require( path.resolve( cwd, 'epm-ui-boot.config.js' ) );
 
 module.exports = {
 
@@ -22,5 +23,11 @@ module.exports = {
     output: {
       views: path.resolve( cwd, '../resources' )
     }
+  },
+  config: {
+    js: config.js,
+    cs: config.cs,
+    title: config.title,
+    contextPath: config.contextPath
   }
 };
